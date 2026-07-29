@@ -36,6 +36,33 @@ Capacictor Time Constant = 25.3µF x 790 = ~20ms
 
 therefore components whill be fully charged in 100ms, as 5 time constansts are needed to reach steady state.
 
+Q1.5: 
+Circuit with 12.5Ω Resistor
+Parameter       Theoretical Value      Simulated Value
+IL(RMS)            1.12A                     1.11
+VL(RMS)            14V                       14V
+Peak PL(t)          31.36W                   33
+Pin                    15.68W                   -15
+
+Circuit with 4mH Inductor
+Parameter       Theoretical Value           Simulated Value
+IL(RMS)              1.14A                       1.481A
+VL(RMS)              13.993V                     13.91V
+Peak PL(t)           31.2W                       33.431W 
+Pin                  0.248W                      0.110W
+
+Circuit with 25.3μF Capacitor
+Parameter     Theoretical Value        Simulated Value
+IL(RMS)            1.11A                    1.10A
+VL(RMS)            13.964V                 18.58V
+Peak PL(t)         31.0W                   38.20W
+Pin               0.247W                    0.10W
+
+q1.6: 
+Reducing the maximum timestep from 100us to 1 us gets rid of the visible discretiisation at the wavefrom peaks producing a smooth sinusoid. The simulated RMS and power values also measured slightly closer to the theroirtcal predications. The tradeoff is a significant increase in simulation time and output file size, since the simulator must now compute approximately 100x more points across the same time window.
+
+
+
 # Assignment
 
 ## Question 2
