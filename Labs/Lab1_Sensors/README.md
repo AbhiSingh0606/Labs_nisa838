@@ -140,3 +140,49 @@ RL = sqrt(94.864^2 − 12.57^2) = 94.03 Ω
 I will be using a 0.5 ohm resistor. A shunt that's too small will have bad SNR, but one too high will risk exceeding the 200 mW power budget. As our calculated upper limit is 0.565 ohms, I think 0.5 ohm is a good value for our shunt resistor.
 
 
+q 4.1
+max source voltage is 15.4 V_rms
+
+V_pk = 15.4 x sqr2 = 21.78 V
+v_pk to v_pk = 43.56
+vout = vin rb/(ra + rb)
+2/43.56 = rb/(ra + rb)
+43.56/2 = ra/rb + rb/rb
+ra/rb = 20.78
+
+ra = 100k
+tb = 4.8k
+
+everything allgins
+
+Q 4.2
+Voltage divider: Ra = 100k, Rb = 4.8k, so Rb/(Ra+Rb) = 4.8/104.8 = 0.0458
+
+Case 1 — 7.5 VA @ 12.6 Vrms
+RL = 17.03 ohms (from Part 3)
+IL = 7.5/12.6 = 0.595 A
+Vvs(pk) = Vac x √2 x Rb/(Ra+Rb) = 12.6 x 1.414 x 0.0458 = 816 mV, simulated value = 815.03859mV
+Pvs = Vac^2/(Ra+Rb) = 12.6^2/104800 = 1.52 mW, simulated value = 1.4966mW
+
+Case 2 — 7.5 VA @ 15.4 Vrms
+RL = 29.01 ohms (from Part 3)
+IL = 7.5/15.4 = 0.487 A
+Vvs(pk) = 15.4 x 1.414 x 0.0458 = 998 mV, simulated value = 995.1323mV
+Pvs = 15.4^2/104800 = 2.26 mW, simulated value = 2.2355mW
+
+Case 3 — 2.5 VA @ 15.4 Vrms
+RL = 94.03 ohms (from Part 3)
+IL = 2.5/15.4 = 0.162 A
+Vvs(pk) = 15.4 x 1.414 x 0.0458 = 998 mV, simulated value = 995.1323mV
+Pvs = 15.4^2/104800 = 2.26 mW, simulated value = 2.2355mW
+
+Yes, the 2 V peak-to-peak target is met. At the highest source voltage (15.4 V), the divider output is about 1 V peak, which is 2 V peak-to-peak — the right size for the ADC to read safely. The power wasted in the divider resistors is tiny (only about 2 mW) because the resistors are large and barely any current flows through them. The simulated values match my calculations, so the divider is stepping the voltage down correctly without wasting power.
+
+q 4.3
+
+Parameter | Ohms | Kilo-Ohms | Mega-Ohms
+SNR | High | Medium | Low
+Dissipation (Pvs) | High | Medium | Low
+Sensitivity | Low | Medium | High
+
+
