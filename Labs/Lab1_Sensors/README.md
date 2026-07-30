@@ -61,7 +61,8 @@ Pin               0.247W                    0.10W
 q1.6: 
 Reducing the maximum timestep from 100us to 1 us gets rid of the visible discretiisation at the wavefrom peaks producing a smooth sinusoid. The simulated RMS and power values also measured slightly closer to the theroirtcal predications. The tradeoff is a significant increase in simulation time and output file size, since the simulator must now compute approximately 100x more points across the same time window.
 
-
+q1.7 
+With the damping resistors removed, both the inudctive and capactivie circuits failed to reach steady-state within the 400ms simulation window - the wavefroms show a persistent offset/drift rather than a clean symmetric sinusoid. This confrims the theoretical predicition that ideal L and C elements however an infinite time constant, since there is no resistive path for the initial transient energy or Ltspices initial condtion mismatch to dissipate.
 
 # Assignment
 
