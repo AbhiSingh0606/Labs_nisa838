@@ -2,7 +2,7 @@
 
 # Lab 2 Notes
 
-Keep a digital log of your work using the readme file where appropriate.
+Keep a digital log of your work using the readme file where appropriate./
 Q1.1 Done in book
 
 Q1.2: The output is clipped because during the negative halfcycle of Vsense, the amplifier attempts t produce a negative output voltage, but it cannont output below 0 V. Therefore the negative portion of the waveforom is clipped near 0V.
