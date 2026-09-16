@@ -21,7 +21,7 @@ Oscilloscope Channel B is connected to the push-button signal on PB7.
 ## QP.2
 
 The LED is connected to PB5, which is physical pin 17 on the ATmega328P.
-a
+
 ## QP.3
 
 There is a short delay between the button input changing and the LED output responding because the microcontroller must read the input and execute the required instructions.
