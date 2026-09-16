@@ -260,7 +260,7 @@ The voltage measured using the multimeter was close to the voltage calculated fr
 
 ## Q4.6
 
-Use the actual oscilloscope measurements from the lab for this question, including the measured amplitude, DC offset and phase difference.
+
 
 ---
 
