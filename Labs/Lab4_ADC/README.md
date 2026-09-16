@@ -59,7 +59,7 @@ The reference voltage sets the voltage range used by the ADC. For example, if Vr
 The sampling rate is how often the ADC takes a measurement. It is normally measured in samples per second or Hz.
 
 ### f) Resolution
-a
+
 Resolution describes how many digital values the ADC can produce.
 
 The ATmega328P has a 10-bit ADC:
