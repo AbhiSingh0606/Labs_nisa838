@@ -235,3 +235,52 @@ Therefore, the maximum Timer1 range is approximately:
 33.55 seconds
 
 ---
+# Part 4 - Measuring Time
+
+## Q4.1
+
+The INT0 square wave has a frequency of approximately:
+
+500 Hz
+
+INT0 receives the zero-crossing signal for Vs.
+
+The original Vs waveform is measured through PC0, which is ADC0.
+
+## Q4.2
+
+Timer0 uses a prescaler of 256 with a 2 MHz system clock.
+
+Timer resolution:
+
+256 / 2,000,000 = 128 us
+
+Timer0 is an 8-bit timer, giving 256 possible counts.
+
+Maximum measurable time:
+
+256 x 128 us = 32.768 ms
+
+The lowest frequency that can be measured over one complete period is:
+
+f_min = 1 / 0.032768
+
+f_min = 30.52 Hz
+
+Therefore, the lowest measurable frequency is approximately:
+
+30.52 Hz
+
+## Q4.3
+
+The measured frequency was approximately 500 Hz overall.
+
+Most measurements were around:
+
+488 Hz
+
+Some measurements were around:
+
+558 Hz
+
+The difference occurs because Timer0 has a resolution of 128 us. The measured time must therefore be represented using a whole number of timer counts, which causes some quantisation error in the calculated frequency.
