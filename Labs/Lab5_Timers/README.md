@@ -181,3 +181,57 @@ It is located in the TIFR0 register.
 OCF0A is bit 1 of TIFR0.
 
 ---
+# Part 2
+
+## Q2.2
+
+The LED toggles approximately every 10 ms.
+
+This matches the Timer0 compare-match period of approximately 9.984 ms.
+
+---
+# Part 3
+
+## Q3.2
+
+Timer0 successfully generates interrupts and toggles the LED at the expected interval.
+
+The LED waveform observed in Proteus confirms that the Timer0 compare-match interrupt is operating correctly.
+
+## Q3.3
+
+Timer0 generates an interrupt approximately every:
+
+9.984 ms
+
+A software counter is incremented each time the ISR runs.
+
+After 10 interrupts, the LED is toggled.
+
+9.984 ms x 10 = 99.84 ms
+
+Therefore, the LED toggles approximately every:
+
+100 ms
+
+## Q3.4
+
+Timer1 is a 16-bit timer, giving:
+
+65536 counts
+
+Using the largest prescaler of 1024:
+
+Timer resolution:
+
+1024 / 2,000,000 = 512 us
+
+Maximum range:
+
+65536 x 512 us = 33.554432 seconds
+
+Therefore, the maximum Timer1 range is approximately:
+
+33.55 seconds
+
+---
