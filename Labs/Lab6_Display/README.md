@@ -31,4 +31,4 @@ Only one digit can be lit at a time because they share the segment wires. Switch
 
 Q 2.1
 
-N + 8 pinss
+N + 8 pins
